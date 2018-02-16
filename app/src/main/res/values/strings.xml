@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Crime Reporting System</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Report_crime">Report City Crime</string>
+    <string name="View_db">View Recent Crime Reports</string>
+    <string name="Reporter_name">Reporter\'s Name</string>
+    <string name="Crime_description">Crime Description</string>
+    <string name="Crime_location">Crime Location</string>
+    <string name="submit">Send</string>
+    <string name="Call_police">Make Sos Call</string>
+    <string name="Crime_Reporting_App">Welcome to Lafia Metropolis</string>
+    <string name="Capture_crime">Capture</string>
+    <string name="show_map">Show Map</string>
+    <string name="Set_up_profile">Set-up Profile</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Get_location">Get Location</string>
+    <string-array name="nav_drawer_items">
+        <item>Titles</item>
+        <item>Tags</item>
+        <item>Capture</item>
+    </string-array>
+
+</resources>

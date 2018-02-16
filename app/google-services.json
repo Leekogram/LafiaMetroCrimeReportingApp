@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1001482764607",
+    "firebase_url": "https://lafiametrocrimereportingapp.firebaseio.com",
+    "project_id": "lafiametrocrimereportingapp",
+    "storage_bucket": "lafiametrocrimereportingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001482764607:android:ff34f4388e5c7b9c",
+        "android_client_info": {
+          "package_name": "com.example.hp_user.chazbaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001482764607-be1aguuobrnrhgdhe21ub7j1dsc5v0lt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hp_user.chazbaa",
+            "certificate_hash": "f0954bcde006b7ac9e87dcbb54c02ab2af8c2bb4"
+          }
+        },
+        {
+          "client_id": "1001482764607-6c51g0nv96j8t2mpc9q2r4lne6psp2p0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs2T5lIYDr45sGCWRUjv2EfhHXxjmP9mI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001482764607-6c51g0nv96j8t2mpc9q2r4lne6psp2p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
