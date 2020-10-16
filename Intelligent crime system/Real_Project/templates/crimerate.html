@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+{% block content %} 
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Crimes Rate</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="static/css/font-face.css" rel="stylesheet" media="all">
+    <link href="static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="static/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="static/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="static/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="static/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="static/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="static/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="static/images/icon/Nigeria-police-logo.jpg" alt="Cool Admin" height="30" width="125" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                        </li>
+						
+						<li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Crime Prediction</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="crimerate.html">Predict Crime Rate</a>
+                                </li>
+								
+								<li>
+                                    <a href="crimetypes.html">Predict Crime Types</a>
+                                </li>
+								
+								<li>
+                                    <a href="crimehotspot.html">Predict Crime spot</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Analysis and Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Datasets</a>
+                        </li>
+                        
+                        
+                        <li class="active">
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Crime Maps</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                         
+                                <h3 style="color:red;font-size:20;text-align:center;">
+                                        INTELLIGENT CRIME MANAGEMENT SYSTEM</h3>     
+                        </div>
+						<form class="form-header" action="{{ url_for('crimerate')}}" method="POST">
+                              
+                            </form>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER DESKTOP-->
+
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- MAP DATA-->
+                                <div class="map-data m-b-40">
+                                    <h3 class="title-3 m-b-30">
+                                        Crime Rate Criteria</h3>
+                                    <div class="filters">
+							<p>Allowing you to predict crime in Lafia metropolis area.</p>
+							<p>Choose a year and and crime type below, to see the predicted crime statistics for that year..</p></br>
+							
+										
+										<form action="{{ url_for('crimerate')}}" method=post>
+		  	<center>
+			<h3>
+		  	<i class=""></i>Select Crime you Want To Predict</h3>
+			
+		  	<div class="filters">
+            <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
+             <br>                       
+			<select class="js-select2" name="crimecat" required>
+			<option value="">Choose...</option>
+			  <option value="1"><h2>Burglary</h2></option>
+			  <option value="11"><h2>Stealing</h2></option>
+			  <option value="4"><h2>Homicide</h2></option>
+			  <option value="9"><h2>Robbery</h2></option>
+			  <option value="8"><h2>Raping</h2></option>
+			  <option value="2"><h2>Cultism</h2></option>
+			  <option value="3"><h2>Drug Abuse</h2></option>
+			  <option value="6"><h2>Kidnapping</h2></option>
+			  <option value="7"><h2>Other Offence</h2></option>
+			  <option value="12"><h2>Assault</h2></option>
+			  <option value="5"><h2>House/Shop Breaking</h2></option>
+			  <option value="13"><h2>Stealing/ Shop Breaking</h2></option>
+			</select>
+			<div class="dropDownSelect2"></div>
+            </div>
+		  	<br>
+		  	<!--<h3 style = "font-family:verdana; font-size:40px;">Year of Prediction</h3>-->
+			<div class="filters">
+            <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
+            <br>
+			<h3>
+		  	<i class=""></i>Year of Prediction</h3>
+			<div class="filters">
+            <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
+            
+			<br>
+		  	<select class="js-select2" name="year" required>
+			<option value="">Choose...</option>
+			  
+			  <option value="2019"><h2>2019</h2> </option>
+			  <option value="2020"><h2>2020</h2> </option>
+			  <option value="2021"><h2>2021</h2> </option>
+			  <option value="2022"><h2>2022</h2> </option>
+			  <option value="2023"><h2>2023</h2> </option>
+			  <option value="2024"><h2>2024</h2> </option>
+			  <option value="2025"><h2>2025</h2> </option>
+			  <option value="2026"><h2>2026</h2> </option>
+			  <option value="2027"><h2>2027</h2> </option>
+			  <option value="2028"><h2>2028</h2> </option>
+			  <option value="2029"><h2>2029</h2> </option>
+			  <option value="2030"><h2>2030</h2> </option>
+			  <option value="2031"><h2>2031</h2> </option>
+			  <option value="2032"><h2>2032</h2> </option>
+			  <option value="2033"><h2>2033</h2> </option>
+			  <option value="2034"><h2>2034</h2> </option>
+			  <option value="2035"><h2>2035</h2> </option>
+			  <option value="2036"><h2>2036</h2> </option>
+			  <option value="2037"><h2>2037</h2> </option>
+			  <option value="2038"><h2>2038</h2> </option>  
+			</select>
+			
+			<div class="dropDownSelect2"></div>
+			<br>
+            </div>
+			<br>
+			
+			<input class="btn btn-primary" type="submit" value="PREDICT">
+			<br>
+			
+		</form> 
+		{{property}}
+          {{comment}}
+		</center>
+										
+                                    </div>
+                                    <div class="map-wrap m-t-45 m-b-20">
+                                      
+                                    </div>
+                                </div>
+                                <!-- END MAP DATA-->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                               
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="static/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="static/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="static/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="static/vendor/slick/slick.min.js">
+    </script>
+    <script src="static/vendor/wow/wow.min.js"></script>
+    <script src="static/vendor/animsition/animsition.min.js"></script>
+    <script src="static/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="static/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="static/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="static/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="static/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="static/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="static/vendor/select2/select2.min.js">
+    </script>
+    <script src="static/vendor/vector-map/jquery.vmap.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.min.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.sampledata.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.world.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.brazil.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.europe.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.france.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.germany.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.russia.js"></script>
+    <script src="static/vendor/vector-map/jquery.vmap.usa.js"></script>
+
+    <!-- Main JS-->
+    <script src="static/js/main.js"></script>
+
+</body>
+{% endblock %}
+</html>
+<!-- end document-->
